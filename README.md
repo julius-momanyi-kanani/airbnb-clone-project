@@ -35,3 +35,37 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 7. **Docker**: Containerization tool for consistent development and deployment environments.
 
 8. **CI/CD Pipelines**: Automated pipelines for testing and deploying code changes.
+
+## Team Roles and Responsibilities
+1. **Business Analyst**  
+   * Acts as the bridge between stakeholders and the technical team. Responsible for gathering, analyzing, and documenting business requirements and ensuring they align with the project’s goals.
+
+2. **Product Owner**  
+   * Represents the customer or end-user. Owns the product vision, prioritizes the product backlog, and ensures the development team delivers maximum value in alignment with business needs.
+
+3. **Project Manager**  
+   * Oversees planning, execution, and delivery of the project. Manages timelines, resources, risks, and communication between team members and stakeholders.
+
+4. **UI/UX Designer**  
+   * Focuses on user experience and interface design. Creates wireframes, prototypes, and design systems to ensure the product is intuitive, accessible, and visually appealing.
+
+5. **Software Architect**  
+   * Defines the high-level structure of the system, makes critical technology choices, and ensures scalability, security, and performance of the software.
+
+6. **Software Developers**  
+   * Write and maintain the codebase. They implement features, fix bugs, and work closely with the architect and QA to ensure proper integration and functionality.
+
+7. **Quality Assurance (QA) Engineers**  
+   * Responsible for identifying bugs and ensuring the product meets quality standards through manual and automated testing processes.
+
+8. **Test Automation Engineers**  
+   * Specialized QA engineers who develop and maintain automated test scripts to ensure efficient, repeatable testing across builds.
+
+9. **DevOps Engineer**  
+   * Manages infrastructure, deployment pipelines, and system monitoring. Ensures seamless integration and delivery of code through CI/CD and maintains system reliability in production.
+
+10. **Backend Developer**  
+    * Focuses on server-side logic, database interactions, and integration of APIs. Ensures that the application performs well under load and handles data securely.
+
+11. **Database Administrator (DBA)**  
+    * Manages and maintains the database systems. Ensures data integrity, optimal performance, backups, and security of the project’s data.
