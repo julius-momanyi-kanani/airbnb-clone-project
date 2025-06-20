@@ -69,3 +69,56 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 
 11. **Database Administrator (DBA)**  
     * Manages and maintains the database systems. Ensures data integrity, optimal performance, backups, and security of the project’s data.
+   
+## Database Design Overview
+The database is designed to efficiently support the core features of the application, including user management, property listings, bookings, reviews, and payments.
+
+#### Key Entities and Fields
+
+1. **Users**
+   - `id` (Primary Key)
+   - `name`
+   - `email`
+   - `password_hash`
+   - `role` (e.g., guest, host, admin)
+
+2. **Properties**
+   - `id` (Primary Key)
+   - `user_id` (Foreign Key → Users)
+   - `title`
+   - `description`
+   - `location`
+   - `price_per_night`
+
+3. **Bookings**
+   - `id` (Primary Key)
+   - `property_id` (Foreign Key → Properties)
+   - `user_id` (Foreign Key → Users)
+   - `check_in_date`
+   - `check_out_date`
+   - `status` (e.g., confirmed, cancelled)
+
+4. **Reviews**
+   - `id` (Primary Key)
+   - `property_id` (Foreign Key → Properties)
+   - `user_id` (Foreign Key → Users)
+   - `rating` (e.g., 1–5)
+   - `comment`
+
+5. **Payments**
+   - `id` (Primary Key)
+   - `booking_id` (Foreign Key → Bookings)
+   - `amount`
+   - `payment_method` (e.g., card, mobile money)
+   - `payment_status` (e.g., successful, failed)
+
+#### Relationships
+
+- A **User** can create multiple **Properties**.
+- A **Property** can have multiple **Bookings**.
+- A **Booking** is made by a **User** for a specific **Property**.
+- A **User** can leave multiple **Reviews** on different **Properties**.
+- A **Review** is always associated with a **User** and a **Property**.
+- A **Payment** is linked to one **Booking**.
+
+This schema supports scalability, integrity, and efficient querying of user and transactional data.
