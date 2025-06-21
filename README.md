@@ -153,3 +153,37 @@ This schema supports scalability, integrity, and efficient querying of user and 
 7. **Database Optimizations**  
    - **Indexing**: Key fields are indexed to speed up data retrieval and improve overall database efficiency.  
    - **Caching**: Strategic caching mechanisms are implemented to reduce load on the database and enhance performance across high-traffic endpoints.
+
+## API Security Overview
+Securing the backend APIs is essential to protect sensitive data and ensure the reliability and trustworthiness of the platform. The following security measures will be implemented, directly supporting the core entities of the database:
+
+1. **Authentication**  
+   All user actions (e.g., creating bookings, posting reviews, or listing properties) require authentication via secure methods such as JSON Web Tokens (JWT).  
+   *Why it's important*: Protects access to sensitive endpoints (e.g., `/users/`, `/bookings/`) and ensures only verified users can interact with the system.
+
+2. **Authorization**  
+   Role-based access control (RBAC) ensures users can only access or modify resources they own. For example, a host can only edit their own properties, and a guest can only view or cancel their own bookings.  
+   *Why it's important*: Prevents unauthorized access to data such as other users' bookings or payment records.
+
+3. **Rate Limiting**  
+   APIs will enforce request limits per user or IP, particularly for endpoints like `/login/` or `/reviews/`.  
+   *Why it's important*: Prevents brute-force attacks and limits abuse of publicly accessible routes.
+
+4. **Input Validation and Sanitization**  
+   All incoming data for fields such as property descriptions, user inputs, and review comments will be validated and sanitized.  
+   *Why it's important*: Protects against common attacks like SQL injection (affecting `Properties`, `Reviews`) and XSS (affecting any text field).
+
+5. **HTTPS Enforcement**  
+   All traffic between clients and the backend (including authentication, bookings, and payments) will be encrypted over HTTPS.  
+   *Why it's important*: Ensures the confidentiality of sensitive data, such as login credentials and payment details in the `Payments` table.
+
+6. **Secure Payment Handling**  
+   Payment processing will be delegated to a trusted third-party provider via secure APIs. The system will store only essential metadata (e.g., transaction status, amount).  
+   *Why it's important*: Reduces the risk of fraud and ensures PCI compliance while maintaining transparency in the `Payments` entity.
+
+7. **Audit Logging**  
+   Key actions—such as user registration, property updates, booking confirmations, and payment processing—will be logged with timestamps and user IDs.  
+   *Why it's important*: Supports traceability and helps detect suspicious behavior across `Users`, `Bookings`, and `Payments`.
+
+By integrating these security practices, the platform will ensure data integrity, user privacy, and system resilience across all major components of the database design.
+
