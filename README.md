@@ -122,3 +122,34 @@ The database is designed to efficiently support the core features of the applica
 - A **Payment** is linked to one **Booking**.
 
 This schema supports scalability, integrity, and efficient querying of user and transactional data.
+
+## Features Overview
+
+1. **API Documentation**  
+   - **OpenAPI Standard**: The backend APIs are documented using the OpenAPI standard, ensuring clear, human- and machine-readable documentation for easy integration.  
+   - **Django REST Framework**: Provides a robust RESTful API for handling all CRUD operations on users, properties, bookings, and more.  
+   - **GraphQL**: Supports flexible and efficient queries, allowing clients to request exactly the data they need.
+
+2. **User Authentication**  
+   - **Endpoints**: `/users/`, `/users/{user_id}/`  
+   - **Features**: Register new users, authenticate securely, and manage user profiles through dedicated endpoints.
+
+3. **Property Management**  
+   - **Endpoints**: `/properties/`, `/properties/{property_id}/`  
+   - **Features**: Allows hosts to create, update, view, and delete property listings with all relevant details.
+
+4. **Booking System**  
+   - **Endpoints**: `/bookings/`, `/bookings/{booking_id}/`  
+   - **Features**: Enables guests to make bookings, update details, and manage check-in/check-out seamlessly.
+
+5. **Payment Processing**  
+   - **Endpoints**: `/payments/`  
+   - **Features**: Facilitates secure payment transactions for bookings, with support for tracking payment status.
+
+6. **Review System**  
+   - **Endpoints**: `/reviews/`, `/reviews/{review_id}/`  
+   - **Features**: Allows users to post ratings and reviews for properties, enhancing trust and feedback on the platform.
+
+7. **Database Optimizations**  
+   - **Indexing**: Key fields are indexed to speed up data retrieval and improve overall database efficiency.  
+   - **Caching**: Strategic caching mechanisms are implemented to reduce load on the database and enhance performance across high-traffic endpoints.
