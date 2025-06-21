@@ -123,7 +123,7 @@ The database is designed to efficiently support the core features of the applica
 
 This schema supports scalability, integrity, and efficient querying of user and transactional data.
 
-## Features Breakdown
+## Feature Breakdown
 
 1. **API Documentation**  
    - **OpenAPI Standard**: The backend APIs are documented using the OpenAPI standard, ensuring clear, human- and machine-readable documentation for easy integration.  
