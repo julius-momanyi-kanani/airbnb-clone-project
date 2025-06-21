@@ -187,3 +187,17 @@ Securing the backend APIs is essential to protect sensitive data and ensure the 
 
 By integrating these security practices, the platform will ensure data integrity, user privacy, and system resilience across all major components of the database design.
 
+## CI/CD Pipeline
+
+CI/CD (Continuous Integration and Continuous Deployment) pipelines automate the process of building, testing, and deploying code, ensuring that new changes can be delivered quickly, reliably, and consistently. 
+
+In this project, CI/CD pipelines play a crucial role in maintaining code quality and accelerating development by automatically running tests, building Docker images, and deploying updates to staging or production environments. This minimizes manual errors and ensures that the application remains stable as new features are introduced.
+
+**Tools that may be used include:**
+
+- **GitHub Actions**: Automates tasks such as running tests, linting code, and deploying containers on every push or pull request.
+- **Docker**: Ensures consistent build and runtime environments across development, testing, and production.
+- **Docker Hub or GitHub Container Registry**: Stores and distributes built images.
+- **Heroku, Render, or AWS**: Can be used to deploy the application after successful pipeline runs.
+
+By integrating CI/CD, the team ensures faster feedback loops, reduces integration issues, and delivers a smoother development and deployment experience.
